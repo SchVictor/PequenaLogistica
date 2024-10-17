@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PequenaLogistica", "PequenaLogistica\PequenaLogistica.csproj", "{298932D8-464D-42D0-AC30-5157C3FE48F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PequenaLogisticaInterface", "PequenaLogisticaInterface", "{6D3F865F-8652-422C-9A97-E9C98490479C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bin", "bin", "{7756BFBB-30FC-46CE-87C7-362221190F52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resource", "resource", "{92998199-71B8-4611-A439-A7588FD2A617}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PequenaLogisticaLib", "PequenaLogisticaLib", "{484B0D71-70F7-4DBE-9983-23CD9E74D578}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bin", "bin", "{95E663A9-B7D1-40CC-8D0F-9E118E73DF34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resource", "resource", "{8A156FA4-E258-47E6-8782-2F1A698208EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{298932D8-464D-42D0-AC30-5157C3FE48F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{298932D8-464D-42D0-AC30-5157C3FE48F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{298932D8-464D-42D0-AC30-5157C3FE48F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{298932D8-464D-42D0-AC30-5157C3FE48F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7756BFBB-30FC-46CE-87C7-362221190F52} = {6D3F865F-8652-422C-9A97-E9C98490479C}
+		{92998199-71B8-4611-A439-A7588FD2A617} = {6D3F865F-8652-422C-9A97-E9C98490479C}
+		{95E663A9-B7D1-40CC-8D0F-9E118E73DF34} = {484B0D71-70F7-4DBE-9983-23CD9E74D578}
+		{8A156FA4-E258-47E6-8782-2F1A698208EB} = {484B0D71-70F7-4DBE-9983-23CD9E74D578}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C25109F-1CD4-4691-A830-D6C1F3BA5249}
+	EndGlobalSection
+EndGlobal
