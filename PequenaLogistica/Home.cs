@@ -31,5 +31,11 @@ namespace PequenaLogistica
         {
 
         }
+
+        private void btnCadastroRota_Click(object sender, EventArgs e)
+        {
+            var cadastrarRota = new CadastroRota();
+            cadastrarRota.Show();
+        }
     }
 }

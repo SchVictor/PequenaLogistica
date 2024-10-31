@@ -62,6 +62,7 @@
             btnCadastroRota.TabIndex = 2;
             btnCadastroRota.Text = "CADASTRAR ROTA";
             btnCadastroRota.UseVisualStyleBackColor = true;
+            btnCadastroRota.Click += btnCadastroRota_Click;
             // 
             // btnCadastrarEndereco
             // 
