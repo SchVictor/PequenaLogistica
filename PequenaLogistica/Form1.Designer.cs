@@ -182,6 +182,7 @@
             groupBox2.Size = new Size(428, 461);
             groupBox2.TabIndex = 11;
             groupBox2.TabStop = false;
+            groupBox2.Enter += groupBox2_Enter;
             // 
             // Form1
             // 
