@@ -29,7 +29,7 @@ namespace PequenaLogistica
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string filePath = Path.Combine(Application.StartupPath, "BancoDados.txt");
+            string filePath = Path.Combine(Application.StartupPath, "credenciais.txt");
             string email = txtEmail.Text;
             string senha = txtSenha.Text;
             bool userFound = false;

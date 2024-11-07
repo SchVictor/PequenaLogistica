@@ -19,23 +19,32 @@ namespace PequenaLogistica
 
         private void btnInformarViagem_Click(object sender, EventArgs e)
         {
-
+            var verificarFretes = new ListaFretesDisponiveis();
+            verificarFretes.Show();
         }
 
         private void btnInformarFrete_Click(object sender, EventArgs e)
         {
-
+            var solicitaFrete = new SolicitacaoFrete();
+            solicitaFrete.Show();
         }
 
         private void btnCadastrarEndereco_Click(object sender, EventArgs e)
         {
-
+            var cadastrarEndereco = new CadastroEndereco();
+            cadastrarEndereco.Show();
         }
 
         private void btnCadastroRota_Click(object sender, EventArgs e)
         {
             var cadastrarRota = new CadastroRota();
             cadastrarRota.Show();
+        }
+
+        private void btnVerificarFretesDisponiveis_Click(object sender, EventArgs e)
+        {
+            var verificarFretes = new ListaFretesDisponiveis();
+            verificarFretes.Show();
         }
     }
 }

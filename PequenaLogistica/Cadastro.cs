@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -36,7 +37,10 @@ namespace PequenaLogistica
         {
 
         }
-
+        /*private bool emailValido(string email)
+        {
+            return Regex.IsMatch;
+        }*/
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             if (txtSenha.Text != txtConfirmaSenha.Text)//verifica se senhas coicidem
@@ -51,7 +55,7 @@ namespace PequenaLogistica
             }
             //adicionar formatações e esconder senhas.
 
-            string filePath = Path.Combine(Application.StartupPath, "BancoDados.txt");
+            string filePath = "credenciais.txt";
             string usuarioData = $"{txtNome.Text},{txtEmail.Text},{txtSenha.Text}";
 
             try

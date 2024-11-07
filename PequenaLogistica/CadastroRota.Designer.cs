@@ -36,6 +36,7 @@
             lblCidade = new Label();
             lblMaps = new Label();
             lblkMaps = new LinkLabel();
+            button1 = new Button();
             SuspendLayout();
             // 
             // lblTitle
@@ -109,11 +110,21 @@
             lblkMaps.Tag = "https://www.google.com.br/maps/preview";
             lblkMaps.Text = "Maps";
             // 
+            // button1
+            // 
+            button1.Location = new Point(315, 254);
+            button1.Name = "button1";
+            button1.Size = new Size(204, 29);
+            button1.TabIndex = 10;
+            button1.Text = "CADASTRAR TRAJETO";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // CadastroRota
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(lblkMaps);
             Controls.Add(lblMaps);
             Controls.Add(lblCidade);
@@ -139,5 +150,6 @@
         private Label lblCidade;
         private Label lblMaps;
         private LinkLabel lblkMaps;
+        private Button button1;
     }
 }

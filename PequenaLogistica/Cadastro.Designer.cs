@@ -33,13 +33,13 @@
             lblEmail = new Label();
             lblSenha = new Label();
             groupBox1 = new GroupBox();
+            chkMostraSenha = new CheckBox();
             txtNome = new TextBox();
             txtEmail = new TextBox();
             txtSenha = new TextBox();
             txtConfirmaSenha = new TextBox();
             btnCadastrar = new Button();
             btnBackStart = new Button();
-            chkMostraSenha = new CheckBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -97,6 +97,17 @@
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
             // 
+            // chkMostraSenha
+            // 
+            chkMostraSenha.AutoSize = true;
+            chkMostraSenha.Location = new Point(131, 223);
+            chkMostraSenha.Name = "chkMostraSenha";
+            chkMostraSenha.Size = new Size(124, 24);
+            chkMostraSenha.TabIndex = 13;
+            chkMostraSenha.Text = "Mostrar senha";
+            chkMostraSenha.UseVisualStyleBackColor = true;
+            chkMostraSenha.CheckedChanged += chkMostraSenha_CheckedChanged;
+            // 
             // txtNome
             // 
             txtNome.Location = new Point(81, 31);
@@ -119,6 +130,7 @@
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(174, 27);
             txtSenha.TabIndex = 10;
+            txtSenha.UseSystemPasswordChar = true;
             txtSenha.TextChanged += txtSenha_TextChanged;
             // 
             // txtConfirmaSenha
@@ -127,6 +139,7 @@
             txtConfirmaSenha.Name = "txtConfirmaSenha";
             txtConfirmaSenha.Size = new Size(174, 27);
             txtConfirmaSenha.TabIndex = 9;
+            txtConfirmaSenha.UseSystemPasswordChar = true;
             txtConfirmaSenha.TextChanged += txtConfirmarSenha_TextChanged;
             // 
             // btnCadastrar
@@ -148,17 +161,6 @@
             btnBackStart.Text = "INICIO";
             btnBackStart.UseVisualStyleBackColor = true;
             btnBackStart.Click += btnBackStart_Click;
-            // 
-            // chkMostraSenha
-            // 
-            chkMostraSenha.AutoSize = true;
-            chkMostraSenha.Location = new Point(131, 223);
-            chkMostraSenha.Name = "chkMostraSenha";
-            chkMostraSenha.Size = new Size(124, 24);
-            chkMostraSenha.TabIndex = 13;
-            chkMostraSenha.Text = "Mostrar senha";
-            chkMostraSenha.UseVisualStyleBackColor = true;
-            chkMostraSenha.CheckedChanged += chkMostraSenha_CheckedChanged;
             // 
             // Cadastro
             // 
