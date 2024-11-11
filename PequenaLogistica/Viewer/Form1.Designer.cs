@@ -56,7 +56,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // btnLogin
             // 
@@ -88,7 +87,6 @@
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(216, 27);
             txtEmail.TabIndex = 4;
-            txtEmail.TextChanged += txtEmail_TextChanged;
             // 
             // txtSenha
             // 
@@ -97,7 +95,6 @@
             txtSenha.Size = new Size(217, 27);
             txtSenha.TabIndex = 5;
             txtSenha.UseSystemPasswordChar = true;
-            txtSenha.TextChanged += txtSenha_TextChanged;
             // 
             // label1
             // 
@@ -109,7 +106,6 @@
             label1.TabIndex = 6;
             label1.Text = "RURAL TRACK";
             label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -158,7 +154,6 @@
             groupBox1.Size = new Size(252, 298);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
-            groupBox1.Enter += groupBox1_Enter;
             // 
             // chkshowPassword
             // 
@@ -182,7 +177,6 @@
             groupBox2.Size = new Size(428, 461);
             groupBox2.TabIndex = 11;
             groupBox2.TabStop = false;
-            groupBox2.Enter += groupBox2_Enter;
             // 
             // Form1
             // 
@@ -197,7 +191,6 @@
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Name = "Form1";
             Text = "Form1";
-            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

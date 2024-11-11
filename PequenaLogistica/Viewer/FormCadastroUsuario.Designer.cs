@@ -1,6 +1,6 @@
 ﻿namespace PequenaLogistica
 {
-    partial class Cadastro
+    partial class FormCadastroUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -114,7 +114,6 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(174, 27);
             txtNome.TabIndex = 12;
-            txtNome.TextChanged += txtNome_TextChanged;
             // 
             // txtEmail
             // 
@@ -122,7 +121,6 @@
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(174, 27);
             txtEmail.TabIndex = 11;
-            txtEmail.TextChanged += txtEmail_TextChanged;
             // 
             // txtSenha
             // 
@@ -131,7 +129,6 @@
             txtSenha.Size = new Size(174, 27);
             txtSenha.TabIndex = 10;
             txtSenha.UseSystemPasswordChar = true;
-            txtSenha.TextChanged += txtSenha_TextChanged;
             // 
             // txtConfirmaSenha
             // 
@@ -140,7 +137,6 @@
             txtConfirmaSenha.Size = new Size(174, 27);
             txtConfirmaSenha.TabIndex = 9;
             txtConfirmaSenha.UseSystemPasswordChar = true;
-            txtConfirmaSenha.TextChanged += txtConfirmarSenha_TextChanged;
             // 
             // btnCadastrar
             // 

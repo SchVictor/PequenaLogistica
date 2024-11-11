@@ -25,13 +25,13 @@ namespace PequenaLogistica
 
         private void btnInformarFrete_Click(object sender, EventArgs e)
         {
-            var solicitaFrete = new SolicitacaoFrete();
+            var solicitaFrete = new FormSolicitacaoFrete();
             solicitaFrete.Show();
         }
 
         private void btnCadastrarEndereco_Click(object sender, EventArgs e)
         {
-            var cadastrarEndereco = new CadastroEndereco();
+            var cadastrarEndereco = new FormCadastroEndereco();
             cadastrarEndereco.Show();
         }
 

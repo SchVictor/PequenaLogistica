@@ -7,26 +7,6 @@ namespace PequenaLogistica
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string filePath = Path.Combine(Application.StartupPath, "credenciais.txt");
@@ -74,12 +54,9 @@ namespace PequenaLogistica
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            var cadastro = new Cadastro();
+            var cadastro = new FormCadastroUsuario();
             cadastro.Show();
         }
-
-        
-
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             functionShowPassword(chkshowPassword, txtSenha);
@@ -96,24 +73,6 @@ namespace PequenaLogistica
             }
         }
 
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-            //adicionar condicionais
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

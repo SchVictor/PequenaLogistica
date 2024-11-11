@@ -1,6 +1,6 @@
 ﻿namespace PequenaLogistica
 {
-    partial class CadastroEndereco
+    partial class FormCadastroEndereco
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,18 @@
         {
             lblCity = new Label();
             txtCidade = new TextBox();
-            label2 = new Label();
+            lblLocalidadeBairro = new Label();
             lblRua = new Label();
-            label4 = new Label();
-            textBox2 = new TextBox();
+            lblGps = new Label();
+            txtEstradaGeral = new TextBox();
             txtLocalidadeBairro = new TextBox();
             txtLocalizacao = new TextBox();
             lblkMaps = new LinkLabel();
             btnSaveEndereco = new Button();
+            txtNumero = new TextBox();
+            lblNumero = new Label();
+            txtComplemento = new TextBox();
+            lblComplemento = new Label();
             SuspendLayout();
             // 
             // lblCity
@@ -56,14 +60,14 @@
             txtCidade.Size = new Size(176, 27);
             txtCidade.TabIndex = 1;
             // 
-            // label2
+            // lblLocalidadeBairro
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(312, 74);
-            label2.Name = "label2";
-            label2.Size = new Size(128, 20);
-            label2.TabIndex = 2;
-            label2.Text = "Localidade/Bairro";
+            lblLocalidadeBairro.AutoSize = true;
+            lblLocalidadeBairro.Location = new Point(312, 74);
+            lblLocalidadeBairro.Name = "lblLocalidadeBairro";
+            lblLocalidadeBairro.Size = new Size(128, 20);
+            lblLocalidadeBairro.TabIndex = 2;
+            lblLocalidadeBairro.Text = "Localidade/Bairro";
             // 
             // lblRua
             // 
@@ -74,21 +78,21 @@
             lblRua.TabIndex = 3;
             lblRua.Text = "Estrada Geral/Secundária";
             // 
-            // label4
+            // lblGps
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(312, 181);
-            label4.Name = "label4";
-            label4.Size = new Size(116, 20);
-            label4.TabIndex = 4;
-            label4.Text = "Localização Gps";
+            lblGps.AutoSize = true;
+            lblGps.Location = new Point(312, 294);
+            lblGps.Name = "lblGps";
+            lblGps.Size = new Size(116, 20);
+            lblGps.TabIndex = 4;
+            lblGps.Text = "Localização Gps";
             // 
-            // textBox2
+            // txtEstradaGeral
             // 
-            textBox2.Location = new Point(312, 151);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(176, 27);
-            textBox2.TabIndex = 6;
+            txtEstradaGeral.Location = new Point(312, 150);
+            txtEstradaGeral.Name = "txtEstradaGeral";
+            txtEstradaGeral.Size = new Size(176, 27);
+            txtEstradaGeral.TabIndex = 6;
             // 
             // txtLocalidadeBairro
             // 
@@ -99,7 +103,7 @@
             // 
             // txtLocalizacao
             // 
-            txtLocalizacao.Location = new Point(312, 203);
+            txtLocalizacao.Location = new Point(312, 317);
             txtLocalizacao.Name = "txtLocalizacao";
             txtLocalizacao.Size = new Size(176, 27);
             txtLocalizacao.TabIndex = 8;
@@ -107,7 +111,7 @@
             // lblkMaps
             // 
             lblkMaps.AutoSize = true;
-            lblkMaps.Location = new Point(312, 233);
+            lblkMaps.Location = new Point(390, 347);
             lblkMaps.Name = "lblkMaps";
             lblkMaps.Size = new Size(98, 20);
             lblkMaps.TabIndex = 10;
@@ -116,29 +120,66 @@
             // 
             // btnSaveEndereco
             // 
-            btnSaveEndereco.Location = new Point(312, 273);
+            btnSaveEndereco.Location = new Point(312, 387);
             btnSaveEndereco.Name = "btnSaveEndereco";
             btnSaveEndereco.Size = new Size(176, 29);
             btnSaveEndereco.TabIndex = 11;
             btnSaveEndereco.Text = "SALVAR";
             btnSaveEndereco.UseVisualStyleBackColor = true;
+            btnSaveEndereco.Click += btnSaveEndereco_Click;
             // 
-            // CadastroEndereco
+            // txtNumero
+            // 
+            txtNumero.Location = new Point(312, 207);
+            txtNumero.Name = "txtNumero";
+            txtNumero.Size = new Size(176, 27);
+            txtNumero.TabIndex = 12;
+            // 
+            // lblNumero
+            // 
+            lblNumero.AutoSize = true;
+            lblNumero.Location = new Point(312, 184);
+            lblNumero.Name = "lblNumero";
+            lblNumero.Size = new Size(63, 20);
+            lblNumero.TabIndex = 13;
+            lblNumero.Text = "Número";
+            // 
+            // txtComplemento
+            // 
+            txtComplemento.Location = new Point(312, 264);
+            txtComplemento.Name = "txtComplemento";
+            txtComplemento.Size = new Size(176, 27);
+            txtComplemento.TabIndex = 14;
+            // 
+            // lblComplemento
+            // 
+            lblComplemento.AutoSize = true;
+            lblComplemento.Location = new Point(312, 241);
+            lblComplemento.Name = "lblComplemento";
+            lblComplemento.Size = new Size(180, 20);
+            lblComplemento.TabIndex = 15;
+            lblComplemento.Text = "Complemento/Referência";
+            // 
+            // FormCadastroEndereco
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblComplemento);
+            Controls.Add(txtComplemento);
+            Controls.Add(lblNumero);
+            Controls.Add(txtNumero);
             Controls.Add(btnSaveEndereco);
             Controls.Add(lblkMaps);
             Controls.Add(txtLocalizacao);
             Controls.Add(txtLocalidadeBairro);
-            Controls.Add(textBox2);
-            Controls.Add(label4);
+            Controls.Add(txtEstradaGeral);
+            Controls.Add(lblGps);
             Controls.Add(lblRua);
-            Controls.Add(label2);
+            Controls.Add(lblLocalidadeBairro);
             Controls.Add(txtCidade);
             Controls.Add(lblCity);
-            Name = "CadastroEndereco";
+            Name = "FormCadastroEndereco";
             Text = "CadastroEndereco";
             ResumeLayout(false);
             PerformLayout();
@@ -148,15 +189,19 @@
 
         private Label lblCity;
         private TextBox txtCidade;
-        private Label label2;
+        private Label lblLocalidadeBairro;
         private Label lblRua;
-        private Label label4;
+        private Label lblGps;
         private Label label5;
-        private TextBox textBox2;
+        private TextBox txtEstradaGeral;
         private TextBox txtLocalidadeBairro;
         private TextBox txtLocalizacao;
         private TextBox textBox5;
         private LinkLabel lblkMaps;
         private Button btnSaveEndereco;
+        private TextBox txtNumero;
+        private Label lblNumero;
+        private TextBox txtComplemento;
+        private Label lblComplemento;
     }
 }
