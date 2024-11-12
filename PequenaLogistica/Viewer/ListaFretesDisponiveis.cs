@@ -24,9 +24,7 @@ namespace PequenaLogistica
         {
             FreteControler freteControler = new FreteControler();
             List<Frete> fretes = freteControler.ListarFretes();
-            // Configura o BindingSource com a lista de fretes e vincula ao DataGridView
-            fretesBindingSource.DataSource = fretes;
-            dataGridViewFretes.DataSource = fretesBindingSource;
+
 
             // Configura o DataGridView com os dados dos fretes
             dataGridViewFretes.DataSource = fretes;
@@ -58,6 +56,16 @@ namespace PequenaLogistica
             {
                 MessageBox.Show("Por favor, selecione um frete para efetuar.");
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewFretes_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

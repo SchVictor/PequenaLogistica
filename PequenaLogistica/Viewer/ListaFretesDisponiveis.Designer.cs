@@ -30,10 +30,12 @@
         {
             components = new System.ComponentModel.Container();
             btnEfetuarFrete = new Button();
+            usuarioBindingSource = new BindingSource(components);
+            usuarioBindingSource1 = new BindingSource(components);
             dataGridViewFretes = new DataGridView();
-            fretesBindingSource = new BindingSource(components);
+            ((System.ComponentModel.ISupportInitialize)usuarioBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)usuarioBindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewFretes).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)fretesBindingSource).BeginInit();
             SuspendLayout();
             // 
             // btnEfetuarFrete
@@ -46,14 +48,23 @@
             btnEfetuarFrete.UseVisualStyleBackColor = true;
             btnEfetuarFrete.Click += btnEfetuarFrete_Click;
             // 
+            // usuarioBindingSource
+            // 
+            usuarioBindingSource.DataSource = typeof(models.Usuario);
+            // 
+            // usuarioBindingSource1
+            // 
+            usuarioBindingSource1.DataSource = typeof(models.Usuario);
+            // 
             // dataGridViewFretes
             // 
             dataGridViewFretes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewFretes.Location = new Point(232, 54);
+            dataGridViewFretes.Location = new Point(-2, -1);
             dataGridViewFretes.Name = "dataGridViewFretes";
             dataGridViewFretes.RowHeadersWidth = 51;
-            dataGridViewFretes.Size = new Size(300, 188);
+            dataGridViewFretes.Size = new Size(801, 385);
             dataGridViewFretes.TabIndex = 2;
+            dataGridViewFretes.CellContentClick += dataGridViewFretes_CellContentClick_1;
             // 
             // ListaFretesDisponiveis
             // 
@@ -63,16 +74,17 @@
             Controls.Add(dataGridViewFretes);
             Controls.Add(btnEfetuarFrete);
             Name = "ListaFretesDisponiveis";
-            Text = "ListaFretes";
             Load += ListaFretesDisponiveis_Load;
+            ((System.ComponentModel.ISupportInitialize)usuarioBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)usuarioBindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewFretes).EndInit();
-            ((System.ComponentModel.ISupportInitialize)fretesBindingSource).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
         private Button btnEfetuarFrete;
+        private BindingSource usuarioBindingSource;
+        private BindingSource usuarioBindingSource1;
         private DataGridView dataGridViewFretes;
-        private BindingSource fretesBindingSource;
     }
 }

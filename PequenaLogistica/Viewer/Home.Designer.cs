@@ -32,6 +32,8 @@
             btnCadastroRota = new Button();
             btnCadastrarEndereco = new Button();
             btnInformarFrete = new Button();
+            btnEditarSolicitacaoFrete = new Button();
+            btnEditarCadastro = new Button();
             SuspendLayout();
             // 
             // btnVerificarFretes
@@ -46,7 +48,7 @@
             // 
             // btnCadastroRota
             // 
-            btnCadastroRota.Location = new Point(283, 137);
+            btnCadastroRota.Location = new Point(283, 299);
             btnCadastroRota.Name = "btnCadastroRota";
             btnCadastroRota.Size = new Size(246, 30);
             btnCadastroRota.TabIndex = 2;
@@ -56,7 +58,7 @@
             // 
             // btnCadastrarEndereco
             // 
-            btnCadastrarEndereco.Location = new Point(283, 173);
+            btnCadastrarEndereco.Location = new Point(283, 263);
             btnCadastrarEndereco.Name = "btnCadastrarEndereco";
             btnCadastrarEndereco.Size = new Size(246, 30);
             btnCadastrarEndereco.TabIndex = 3;
@@ -74,17 +76,38 @@
             btnInformarFrete.UseVisualStyleBackColor = true;
             btnInformarFrete.Click += btnInformarFrete_Click;
             // 
+            // btnEditarSolicitacaoFrete
+            // 
+            btnEditarSolicitacaoFrete.Location = new Point(283, 146);
+            btnEditarSolicitacaoFrete.Name = "btnEditarSolicitacaoFrete";
+            btnEditarSolicitacaoFrete.Size = new Size(246, 29);
+            btnEditarSolicitacaoFrete.TabIndex = 4;
+            btnEditarSolicitacaoFrete.Text = "EDITAR SOLICITAÇÃO DE FRETE";
+            btnEditarSolicitacaoFrete.UseVisualStyleBackColor = true;
+            // 
+            // btnEditarCadastro
+            // 
+            btnEditarCadastro.Location = new Point(283, 181);
+            btnEditarCadastro.Name = "btnEditarCadastro";
+            btnEditarCadastro.Size = new Size(246, 28);
+            btnEditarCadastro.TabIndex = 5;
+            btnEditarCadastro.Text = "EDITAR CADASTRO";
+            btnEditarCadastro.UseVisualStyleBackColor = true;
+            // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnEditarCadastro);
+            Controls.Add(btnEditarSolicitacaoFrete);
             Controls.Add(btnCadastrarEndereco);
             Controls.Add(btnCadastroRota);
             Controls.Add(btnInformarFrete);
             Controls.Add(btnVerificarFretes);
             Name = "Home";
             Text = "Home";
+            Load += Home_Load;
             ResumeLayout(false);
         }
 
@@ -94,5 +117,7 @@
         private Button btnCadastroRota;
         private Button btnCadastrarEndereco;
         private Button btnInformarFrete;
+        private Button btnEditarSolicitacaoFrete;
+        private Button btnEditarCadastro;
     }
 }

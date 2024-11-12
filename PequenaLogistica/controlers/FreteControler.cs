@@ -2,12 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PequenaLogistica.controlers
 {
-    internal class FreteControler
+    public class FreteControler
     {
         // Valida os campos obrigatórios para a solicitação de frete
         public bool ValidarCampos(Frete frete)
@@ -28,12 +29,18 @@ namespace PequenaLogistica.controlers
             {
                 return "Por favor, preencha todos os campos corretamente.";
             }
-
-            // Aqui você pode adicionar a lógica de cálculo de frete, verificação de preço, etc.
-            // Por enquanto, apenas retornaremos uma mensagem de sucesso.
-            return "Solicitação de frete realizada com sucesso!";
+            if (salvarSolicitacao(frete))
+            {
+                return "Solicitação de frete realizado com sucesso!";
+            }
+            else
+            {
+                return "Erro ao solicitar.";
+            }
+          
+            
         }
-        private bool salvarSolicitacao(Frete frete)
+        public bool salvarSolicitacao(Frete frete)
         {
             try
             {
@@ -66,30 +73,34 @@ namespace PequenaLogistica.controlers
 
             if (File.Exists(filePath))
             {
-                string[] lines = File.ReadAllLines(filePath);
-                Frete frete = null;
-
-                foreach (string line in lines)
+                using (StreamReader reader = new StreamReader(filePath))
                 {
-                    if (line.StartsWith("Peso:"))
-                    {
-                        if (frete != null) fretes.Add(frete);// Adiciona o frete anterior antes de iniciar um novo
-                        frete = new Frete();
-                        frete.Peso = line.Replace("Peso: ", "").Trim();
-                    }
-                    else if (line.StartsWith("Endereço Retirada:")) frete.EnderecoRetirada = line.Replace("Endereço Retirada: ", "").Trim();
-                    else if (line.StartsWith("Rua Retirada:")) frete.RuaRetirada = line.Replace("Rua Retirada: ", "").Trim();
-                    else if (line.StartsWith("Número Retirada:")) frete.NumeroRetirada = line.Replace("Número Retirada: ", "").Trim();
-                    else if (line.StartsWith("Complemento Retirada:")) frete.ComplementoRetirada = line.Replace("Complemento Retirada: ", "").Trim();
-                    else if (line.StartsWith("Endereço Entrega:")) frete.EnderecoEntrega = line.Replace("Endereço Entrega: ", "").Trim();
-                    else if (line.StartsWith("Rua Entrega:")) frete.RuaEntrega = line.Replace("Rua Entrega: ", "").Trim();
-                    else if (line.StartsWith("Complemento Entrega:")) frete.ComplementoEntrega = line.Replace("Complemento Entrega: ", "").Trim();
+                    Frete frete = null;
 
+                    string line;
+                    while((line = reader.ReadLine()) != null)
+                    {
+                        if (line.StartsWith("Peso:"))
+                        {
+                            // Adiciona o frete anterior antes de iniciar um novo
+                            if (frete != null) fretes.Add(frete);
+                            frete = new Frete();
+                            frete.Peso = line.Replace("Peso: ", "").Trim();
+                        }
+                        else if (line.StartsWith("Endereço Retirada:")) frete.EnderecoRetirada = line.Replace("Endereço Retirada: ", "").Trim();
+                        else if (line.StartsWith("Rua Retirada:")) frete.RuaRetirada = line.Replace("Rua Retirada: ", "").Trim();
+                        else if (line.StartsWith("Número Retirada:")) frete.NumeroRetirada = line.Replace("Número Retirada: ", "").Trim();
+                        else if (line.StartsWith("Complemento Retirada:")) frete.ComplementoRetirada = line.Replace("Complemento Retirada: ", "").Trim();
+                        else if (line.StartsWith("Endereço Entrega:")) frete.EnderecoEntrega = line.Replace("Endereço Entrega: ", "").Trim();
+                        else if (line.StartsWith("Rua Entrega:")) frete.RuaEntrega = line.Replace("Rua Entrega: ", "").Trim();
+                        else if (line.StartsWith("Complemento Entrega:")) frete.ComplementoEntrega = line.Replace("Complemento Entrega: ", "").Trim();
+                        else if (line.StartsWith("Contato Whatsapp:")) frete.Contato = line.Replace("Contato Whatsapp: ", "").Trim();
+
+                    }
+                    if (frete != null) fretes.Add(frete);// Adiciona o último frete
                 }
-                if (frete != null) fretes.Add(frete);// Adiciona o último frete
             }
             return fretes;
-
         }
     }
 }

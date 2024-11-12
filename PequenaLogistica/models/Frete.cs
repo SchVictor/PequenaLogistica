@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace PequenaLogistica.models
 {
-    internal class Frete
+    public class Frete
     {
         public string? Peso {  get; set; }
         public string? EnderecoRetirada { get; set; }

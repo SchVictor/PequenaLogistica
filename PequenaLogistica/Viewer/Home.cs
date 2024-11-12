@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PequenaLogistica.DesignPattern;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace PequenaLogistica
         public Home()
         {
             InitializeComponent();
+
         }
 
         private void btnInformarViagem_Click(object sender, EventArgs e)
@@ -45,6 +47,12 @@ namespace PequenaLogistica
         {
             var verificarFretes = new ListaFretesDisponiveis();
             verificarFretes.Show();
+        }
+
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
